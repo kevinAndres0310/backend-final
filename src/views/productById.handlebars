@@ -1,0 +1,18 @@
+<div class='product-details'>
+  <h1>{{product.name}}</h1>
+  <img src='{{product.imageUrl}}' />
+  <p class='product-description'>{{product.description}}</p>
+  <p class='product-price'>Price: ${{product.price}}</p>
+  <p class='product-category'>Category: {{product.category}}</p>
+  <p class='product-stock'>Stock: {{product.stock}}</p>
+  <button
+    class='remove-button'
+    onclick="removeProduct('{{product._id}}')"
+  >Remove</button>
+  <button id='addToCartButton' data-product-id='{{product._id}}'>
+    Agregar al carrito
+  </button>
+</div>
+
+<script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+<script src='/js/productById.js'></script>

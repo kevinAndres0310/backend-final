@@ -1,0 +1,23 @@
+<head>
+  <link rel='stylesheet' href='/css/cartById.css' />
+</head>
+
+<div>
+  <h2>Carrito</h2>
+  <div>
+    {{#each items}}
+      <div class='product'>
+        <p>Producto: {{product.name}}</p>
+        <p>Cantidad: {{quantity}}</p>
+        <p>Precio por Item: ${{product.price}}</p>
+        <button class='remove-button' data-product-id='{{product._id}}'>
+          Remove
+        </button>
+      </div>
+      <hr />
+    {{/each}}
+  </div>
+  <p>Total Price: ${{totalPrice}}</p>
+</div>
+
+<script src='/js/cartById.js'></script>
